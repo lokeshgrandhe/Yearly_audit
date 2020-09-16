@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Output</title>
+
+    <a href="{{url_for('s_main')}}">Home</a>
+    <a href="{{url_for('add_data')}}">Add</a>
+    <a href="{{url_for('f_name')}}">Filter</a>
+    <a href={{url_for('static', filename='plot.html')}} target="plot">Plots</a>
+
+</head>
+<body>
+<p>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div style="overflow-x:auto;">
+{% for table in out %}
+            {{ table|safe }}
+{% endfor %}
+</div>
+
+<h3>Totals</h3>
+<div style="overflow-x:auto;">
+{% for table in tol %}
+            {{ table|safe }}
+{% endfor %}
+</div>
+
+</body>
+
+</html>

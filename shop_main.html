@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DLF Show Room</title>
+</head>
+<body>
+<p>{{ f_name }}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div class ="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>DLF Showroom</h1>
+        </div>
+        <div class="col-md-4">
+            <form action = "http://localhost:5000/status" method = "POST">
+         <p>Enter File Name <input type = "text" placeholder = "File Name" name = "name" required/></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

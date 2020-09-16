@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <a href="{{url_for('s_main')}}">Home</a>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p>{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+
+<form action = "http://localhost:5000/create_new" method = "POST">
+    <p>Enter the financial year to create {{ name }} file :
+    <select id="year" name="s_year" placeholder="YYYY" required></select></p>
+    <script>
+    var start = new Date().getFullYear() - 20;
+var end = new Date().getFullYear() + 5;
+var options = "";
+for(var year = start ; year <=end; year++){
+  options += "<option>"+ year +"</option>";
+}
+document.getElementById("year").innerHTML = options;
+</script>
+
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+</body>
+</html>

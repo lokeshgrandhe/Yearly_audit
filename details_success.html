@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+<h3>Below details are updated for {{ date }} in {{ file }} </h3>
+    <a href="{{url_for('s_main')}}">Home</a>
+    <a href="{{url_for('add_data')}}">Add</a>
+    <a href="{{url_for('f_name')}}">Filter</a>
+</head>
+<body>
+
+<table style="text-align:left valign=:top;">
+    <tr> <th>Amount</th> <th>Expenses</th> <th>Total Amount</th></tr>
+    <tr> <td>{{ amt }}</td> <td>{{ exp }}</td> <th>{{ tot }}</th></tr>
+</table>
+
+<h3 style="text-align:right valign=:top;">Totals in {{ file }}</h3>
+<p style="text-align:right valign=:top;">
+{% for table in data %}
+            {{ table|safe }}
+    {% endfor %}</p>
+</p>
+</body>
+</html>
