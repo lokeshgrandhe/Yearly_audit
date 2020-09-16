@@ -29,6 +29,7 @@ Required code changes in shop.py:
 line 37 --> provide your local drectory path to store MS excel sheets.
 line 115 --> provide your static directory path to store plot.html file.
 line 156 --> Provide your static directory path to write into plot.html file.
+line 333 --> provide your local drectory path to store MS excel sheets.
 
 ###################################################################################
 Manual:
