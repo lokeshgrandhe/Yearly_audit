@@ -4,6 +4,7 @@ Basic idea of the project is to get yearly trends of your business expenses and 
 
 This is a web application created with help of Python Flask.
 ###################################################################################
+
 Details:
   Insted of database used MS excel for storing data.
     MS Excel contains DATE, DAy, Amount, Expenses and Total Amount columns.
@@ -11,7 +12,8 @@ Details:
     Pandas, xlxswriter, plotly, flask, os, datetime and openpyxl
   IDE used:
     Pycharm
-###################################################################################    
+###################################################################################   
+
 Project template:
 Project name
   files
@@ -22,6 +24,7 @@ Project name
     contains plot.html (Since it is a static html file)
   shop.py
 ###################################################################################
+
 Required code changes:
 
 
