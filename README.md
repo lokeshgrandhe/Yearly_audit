@@ -33,7 +33,7 @@ line 333 --> provide your local drectory path to store MS excel sheets.
 
 ###################################################################################
 Manual:
-Run the .py file after placing all files as per mentioned above
+Run the shop.py file after placing all files as per mentioned above
 
 Once started in browser(chrome) Prompts for file name.
   If given file name exists:
