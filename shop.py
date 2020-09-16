@@ -330,6 +330,7 @@ def amt_details():
 @app.route('/create_new', methods = ['POST','GET'])
 def c_new():
     f_n = session.get('f_name', None)
+    f_path = '<file_path>' + f_n
     year = request.form['s_year']
     y1 = int(year) + 1
     y2 = str(y1)
