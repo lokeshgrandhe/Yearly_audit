@@ -34,7 +34,7 @@ def f_name():
             f_n = file_name + ".xlsx"
             session['f_name'] = f_n
 
-        f_path = 'C:\\Users\\Hello\\Desktop\\loki\\python\\pycharm\\shop\\Shop\\files\\'+f_n
+        f_path = '<Provide file_path>'+f_n
         session['f_p'] = f_path
 
         if os.path.exists(f_path):
@@ -112,7 +112,7 @@ def data():
         df_dn['DDD'] = df_dn.index
         df_e['DDD'] = df_e['DDD'].astype(str)
 
-        html_name = r"C:\\Users\\Hello\\Desktop\\loki\\python\\pycharm\\shop\\Shop\\static\\plot.html"
+        html_name = r"<static_file>plot.html"
         silentremove(html_name)
 
         fig = px.bar(x=ddf['DATE'], y=[ddf['Amount'], ddf['Total Amount'], ddf['Expences']])
@@ -153,7 +153,7 @@ def data():
                            title='Total Amount details for selected period with respect to day names',
                            xaxis_title="", yaxis_title="Amount", yaxis_tickformat=',.')
 
-        with open(r'c:\Users\Hello\Desktop\loki\python\pycharm\shop\Shop\static\plot.html', 'a') as f:
+        with open(r'<plot.html>', 'a') as f:
             f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
             f.write(fig1.to_html(full_html=False, include_plotlyjs='cdn'))
             f.write(fig2.to_html(full_html=False, include_plotlyjs='cdn'))
