@@ -1,4 +1,3 @@
- Yearly_audit
 Check yearly trends of your business
 Basic idea of the project is to get yearly trends of your business expenses and totals.
 
